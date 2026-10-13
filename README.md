@@ -17,10 +17,10 @@ A full-stack web application designed for university campuses to centralize even
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+), Responsive UI
-- **Backend**: Java 17, Spring Boot, Spring Data JPA, RESTful APIs
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+), Responsive Design
+- **Backend**: Java 17, Spring Boot 3, Spring Data JPA, RESTful APIs
 - **Database**: MySQL
-- **Build Tool**: Maven
+- **Build Tool**: Maven Wrapper (`mvnw`)
 
 ---
 
