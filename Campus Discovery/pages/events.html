@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Events | Campus Discovery</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="../css/responsive.css">
+
+    <link rel="stylesheet"
+          href="../css/events.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>Campus</span> Discovery
+        </div>
+
+
+        <nav>
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="events.html"
+               class="active">
+                Events
+            </a>
+
+            <a href="clubs.html">
+                Clubs
+            </a>
+
+            <a href="announcements.html">
+                Announcements
+            </a>
+
+        </nav>
+
+
+        <a href="login.html"
+           class="login-btn">
+
+            Login
+
+        </a>
+
+    </header>
+
+
+
+    <!-- PAGE HEADER -->
+
+    <section class="page-header">
+
+        <p class="section-label">
+            DISCOVER & PARTICIPATE
+        </p>
+
+        <h1>
+            Campus <span>Events</span>
+        </h1>
+
+        <p>
+            Explore workshops, competitions, cultural programs,
+            hackathons and more happening on your campus.
+        </p>
+
+    </section>
+
+
+
+    <!-- SEARCH AND FILTER -->
+
+    <section class="event-controls">
+
+        <div class="event-search">
+
+            <input
+                type="text"
+                id="eventSearch"
+                placeholder="Search events..."
+                onkeyup="filterEvents()">
+
+            <span>🔍</span>
+
+        </div>
+
+
+        <div class="filter-buttons">
+
+            <button
+                class="filter-btn active-filter"
+                onclick="filterCategory('all', this)">
+
+                All
+
+            </button>
+
+
+            <button
+                class="filter-btn"
+                onclick="filterCategory('technical', this)">
+
+                💻 Technical
+
+            </button>
+
+
+            <button
+                class="filter-btn"
+                onclick="filterCategory('cultural', this)">
+
+                🎭 Cultural
+
+            </button>
+
+
+            <button
+                class="filter-btn"
+                onclick="filterCategory('sports', this)">
+
+                🏆 Sports
+
+            </button>
+
+
+            <button
+                class="filter-btn"
+                onclick="filterCategory('workshop', this)">
+
+                🧠 Workshop
+
+            </button>
+
+
+            <button
+                class="filter-btn"
+                onclick="filterCategory('competition', this)">
+
+                🚀 Competition
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- EVENTS -->
+
+    <main class="all-events">
+
+    <div id="eventsContainer"></div>
+
+    <div id="noEvents"
+         class="no-events">
+        No events found.
+    </div>
+
+</main>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            Campus <span>Discovery</span>
+        </div>
+
+        <p>
+            Discover. Participate. Connect.
+        </p>
+
+
+        <div class="footer-links">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="events.html">
+                Events
+            </a>
+
+            <a href="clubs.html">
+                Clubs
+            </a>
+
+            <a href="announcements.html">
+                Announcements
+            </a>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 Campus Discovery. Academic Project.
+        </p>
+
+    </footer>
+
+
+
+    <script src="../js/events.js"></script>
+
+</body>
+
+</html>

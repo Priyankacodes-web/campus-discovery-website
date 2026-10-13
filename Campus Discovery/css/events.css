@@ -1,0 +1,198 @@
+/* PAGE HEADER */
+
+.page-header {
+    text-align: center;
+    padding: 70px 20px 50px;
+    background: linear-gradient(
+        135deg,
+        #eef0ff,
+        #ffffff
+    );
+}
+
+.page-header h1 {
+    font-size: 52px;
+    margin: 10px 0;
+}
+
+.page-header h1 span {
+    color: #5b5bf7;
+}
+
+.page-header > p:last-child {
+    max-width: 650px;
+    margin: auto;
+    color: #666;
+}
+
+
+/* CONTROLS */
+
+.event-controls {
+    padding: 35px 8%;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+.event-search {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0 15px;
+}
+
+.event-search input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 15px 5px;
+    font-size: 15px;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-btn {
+    border: 1px solid #ddd;
+    background: white;
+    padding: 10px 17px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.filter-btn:hover,
+.active-filter {
+    background: #5b5bf7;
+    color: white;
+    border-color: #5b5bf7;
+}
+
+
+/* EVENTS GRID */
+
+.all-events {
+    padding: 50px 8%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    background: #f8f9fc;
+}
+
+
+/* EVENT CARD */
+
+.event-card-large {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    transition: .3s;
+}
+
+.event-card-large:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,.08);
+}
+
+
+/* EVENT BANNER */
+
+.event-banner {
+    height: 190px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.technical-bg {
+    background: #e9ecff;
+}
+
+.workshop-bg {
+    background: #e8f7f1;
+}
+
+.cultural-bg {
+    background: #fff0e7;
+}
+
+.sports-bg {
+    background: #e8f4ff;
+}
+
+.competition-bg {
+    background: #f5eaff;
+}
+
+.big-event-icon {
+    font-size: 70px;
+}
+
+.event-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: white;
+    color: #5b5bf7;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 7px 12px;
+    border-radius: 20px;
+}
+
+
+/* CARD BODY */
+
+.event-card-body {
+    padding: 25px;
+}
+
+.event-card-body h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.event-card-body > p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+    color: #555;
+}
+
+.event-card-footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.organizer {
+    color: #777;
+    font-size: 12px;
+}
+
+.no-events {
+    display: none;
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px;
+    color: #777;
+}

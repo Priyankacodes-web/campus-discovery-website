@@ -1,0 +1,239 @@
+/* =========================
+   CLUBS PAGE
+========================= */
+
+.clubs-section {
+    padding: 60px 0;
+    background: #f7f8fc;
+}
+
+
+/* Controls */
+
+.club-controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.club-search {
+    flex: 1;
+    padding: 15px 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.club-search:focus {
+    border-color: #5b5bf7;
+}
+
+.club-controls select {
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: white;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+}
+
+
+/* Clubs Grid */
+
+.clubs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+
+/* Club Card */
+
+.club-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    min-height: 260px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transition: 0.3s ease;
+}
+
+.club-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Club Icon */
+
+.club-icon {
+    width: 150px;
+    min-width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+}
+
+
+/* Different backgrounds */
+
+.technical-icon {
+    background: #e8e9ff;
+}
+
+.robotics-icon {
+    background: #e5f7ff;
+}
+
+.ai-icon {
+    background: #eee7ff;
+}
+
+.photography-icon {
+    background: #fff0df;
+}
+
+.cultural-icon {
+    background: #ffe5ee;
+}
+
+.sports-icon {
+    background: #e5f8e8;
+}
+
+.music-icon {
+    background: #fff4cc;
+}
+
+.business-icon {
+    background: #e7f2ff;
+}
+
+
+/* Club Content */
+
+.club-content {
+    padding: 25px;
+    flex: 1;
+}
+
+.club-category {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #5b5bf7;
+    margin-bottom: 8px;
+}
+
+.club-content h2 {
+    margin-bottom: 10px;
+    font-size: 23px;
+    color: #181a2a;
+}
+
+.club-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+
+/* Club Info */
+
+.club-info {
+    display: flex;
+    gap: 20px;
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+
+/* Button */
+
+.club-btn {
+    text-decoration: none;
+    color: #5b5bf7;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.club-btn:hover {
+    text-decoration: underline;
+}
+
+
+/* No Clubs */
+
+.no-clubs {
+    display: none;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.no-clubs h2 {
+    margin-bottom: 10px;
+}
+
+.no-clubs p {
+    color: #777;
+}
+
+
+/* CTA */
+
+.club-cta {
+    padding: 70px 20px;
+    text-align: center;
+    background: #5b5bf7;
+    color: white;
+}
+
+.club-cta h2 {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.club-cta p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    line-height: 1.7;
+}
+
+.club-cta .primary-btn {
+    background: white;
+    color: #5b5bf7;
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .clubs-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .club-controls {
+        flex-direction: column;
+    }
+
+    .club-card {
+        flex-direction: column;
+    }
+
+    .club-icon {
+        width: 100%;
+        height: 130px;
+    }
+
+}

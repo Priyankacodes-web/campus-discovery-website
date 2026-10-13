@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Campus Discovery</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+
+    <!-- ==================== ADMIN HEADER ==================== -->
+
+    <header class="admin-header">
+
+        <div class="admin-logo">
+            Campus<span>Discovery</span>
+            <small>ADMIN</small>
+        </div>
+
+        <div class="admin-profile">
+            <span class="admin-avatar">👨‍💼</span>
+
+            <div>
+                <strong>Admin</strong>
+                <small>Administrator</small>
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- ==================== ADMIN LAYOUT ==================== -->
+
+    <div class="admin-layout">
+
+        <!-- ==================== SIDEBAR ==================== -->
+
+        <aside class="admin-sidebar">
+
+            <div class="sidebar-title">
+                ADMIN PANEL
+            </div>
+
+            <a href="#"
+               class="sidebar-link active"
+               onclick="showSection('dashboard', event)">
+                📊 Dashboard
+            </a>
+
+            <a href="#"
+               class="sidebar-link"
+               onclick="showSection('events', event)">
+                📅 Manage Events
+            </a>
+
+            <a href="#"
+               class="sidebar-link"
+               onclick="showSection('clubs', event)">
+                👥 Manage Clubs
+            </a>
+
+            <a href="#"
+               class="sidebar-link"
+               onclick="showSection('announcements', event)">
+                📢 Announcements
+            </a>
+
+            <a href="#"
+               class="sidebar-link"
+               onclick="showSection('registrations', event)">
+                📝 Registrations
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <a href="profile.html" class="sidebar-link">
+                👤 My Profile
+            </a>
+
+            <a href="../index.html" class="sidebar-link">
+                🌐 View Website
+            </a>
+
+            <a href="login.html" class="sidebar-link logout">
+                🚪 Logout
+            </a>
+
+        </aside>
+
+
+        <!-- ==================== MAIN CONTENT ==================== -->
+
+        <main class="admin-main">
+
+
+            <!-- ==================== DASHBOARD ==================== -->
+
+            <section id="dashboardSection" class="admin-section">
+
+                <div class="admin-page-heading">
+
+                    <div>
+                        <h1>Dashboard</h1>
+
+                        <p>
+                            Welcome back, Admin!
+                            Here's what's happening on your platform.
+                        </p>
+                    </div>
+
+                    <span class="current-date">
+                        September 2026
+                    </span>
+
+                </div>
+
+
+                <!-- Statistics -->
+
+                <div class="admin-stats">
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            📅
+                        </div>
+
+                        <div>
+                            <h2 id="eventCount">0</h2>
+                            <p>Total Events</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            👥
+                        </div>
+
+                        <div>
+                            <h2 id="clubCount">0</h2>
+                            <p>Active Clubs</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            📢
+                        </div>
+
+                        <div>
+                            <h2 id="announcementCount">0</h2>
+                            <p>Announcements</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            📝
+                        </div>
+
+                        <div>
+                            <h2 id="registrationCount">0</h2>
+                            <p>Registrations</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Welcome Card -->
+
+                <div class="admin-welcome">
+
+                    <h2>Campus Discovery Admin Panel 🚀</h2>
+
+                    <p>
+                        Manage campus events, clubs, announcements
+                        and student registrations from one place.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================== EVENTS ==================== -->
+
+            <section id="eventsSection"
+                     class="admin-section"
+                     style="display: none;">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h1>Manage Events</h1>
+
+                        <p>
+                            Create, update and delete campus events.
+                        </p>
+                    </div>
+
+                    <button
+                        class="admin-btn"
+                        onclick="openAddEventModal()">
+                        + Add Event
+                    </button>
+
+                </div>
+
+
+                <div class="admin-table-container">
+
+                    <table class="admin-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>ID</th>
+                                <th>Event</th>
+                                <th>Category</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Venue</th>
+                                <th>Organizer</th>
+                                <th>Actions</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="eventTableBody">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================== CLUBS ==================== -->
+
+            <section id="clubsSection"
+                     class="admin-section"
+                     style="display: none;">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h1>Manage Clubs</h1>
+
+                        <p>
+                            Create, update and manage student clubs.
+                        </p>
+                    </div>
+
+                    <button
+                        class="admin-btn"
+                        onclick="openAddClubModal()">
+                        + Add Club
+                    </button>
+
+                </div>
+
+
+                <div class="admin-table-container">
+
+                    <table class="admin-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>ID</th>
+                                <th>Club Name</th>
+                                <th>Category</th>
+                                <th>Coordinator</th>
+                                <th>Meeting Day</th>
+                                <th>Meeting Time</th>
+                                <th>Venue</th>
+                                <th>Actions</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="clubTableBody">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================== ANNOUNCEMENTS ==================== -->
+
+            <section id="announcementsSection"
+                     class="admin-section"
+                     style="display: none;">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h1>Announcements</h1>
+
+                        <p>
+                            Manage important campus announcements.
+                        </p>
+                    </div>
+
+                    <button
+                        class="admin-btn"
+                        onclick="openAddAnnouncementModal()">
+                        + Add Announcement
+                    </button>
+
+                </div>
+
+
+                <div class="admin-table-container">
+
+                    <table class="admin-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>ID</th>
+                                <th>Title</th>
+                                <th>Category</th>
+                                <th>Description</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="announcementTableBody">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================== REGISTRATIONS ==================== -->
+
+            <section id="registrationsSection"
+                     class="admin-section"
+                     style="display: none;">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h1>Event Registrations</h1>
+
+                        <p>
+                            View and manage student event registrations.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-table-container">
+
+                    <table class="admin-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>ID</th>
+                                <th>Student Name</th>
+                                <th>Student ID</th>
+                                <th>Event ID</th>
+                                <th>Email</th>
+                                <th>Department</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="registrationTableBody">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- ================================================== -->
+    <!-- ADD EVENT MODAL -->
+    <!-- ================================================== -->
+
+    <div id="eventModal" class="modal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h2>Add New Event</h2>
+
+                <button
+                    class="modal-close"
+                    onclick="closeModal('eventModal')">
+                    ×
+                </button>
+
+            </div>
+
+
+            <form onsubmit="addEvent(event)">
+
+                <div class="form-group">
+
+                    <label for="eventTitle">
+                        Event Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="eventTitle"
+                        placeholder="Enter event title"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="eventCategory">
+                        Category
+                    </label>
+
+                    <select id="eventCategory" required>
+
+                        <option value="">
+                            Select Category
+                        </option>
+
+                        <option value="Technical">
+                            Technical
+                        </option>
+
+                        <option value="Cultural">
+                            Cultural
+                        </option>
+
+                        <option value="Sports">
+                            Sports
+                        </option>
+
+                        <option value="Workshop">
+                            Workshop
+                        </option>
+
+                        <option value="Competition">
+                            Competition
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="eventDescription">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="eventDescription"
+                        placeholder="Enter event description"
+                        required></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="eventDate">
+                        Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="eventDate"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="eventTime">
+                        Time
+                    </label>
+
+                    <input
+                        type="text"
+                        id="eventTime"
+                        placeholder="Example: 10:00 AM"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="eventVenue">
+                        Venue
+                    </label>
+
+                    <input
+                        type="text"
+                        id="eventVenue"
+                        placeholder="Enter venue"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="eventOrganizer">
+                        Organizer
+                    </label>
+
+                    <input
+                        type="text"
+                        id="eventOrganizer"
+                        placeholder="Enter organizer"
+                        required>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="admin-btn">
+                    Add Event
+                </button>
+
+                <button
+                    type="button"
+                    class="cancel-btn"
+                    onclick="closeModal('eventModal')">
+                    Cancel
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================================== -->
+    <!-- EDIT EVENT MODAL -->
+    <!-- ================================================== -->
+
+    <div id="editEventModal" class="modal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h2>Edit Event</h2>
+
+                <button
+                    class="modal-close"
+                    onclick="closeModal('editEventModal')">
+                    ×
+                </button>
+
+            </div>
+
+
+            <form onsubmit="updateEvent(event)">
+
+                <input
+                    type="hidden"
+                    id="editEventId">
+
+
+                <div class="form-group">
+
+                    <label for="editEventTitle">
+                        Event Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editEventTitle"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editEventCategory">
+                        Category
+                    </label>
+
+                    <select
+                        id="editEventCategory"
+                        required>
+
+                        <option value="Technical">
+                            Technical
+                        </option>
+
+                        <option value="Cultural">
+                            Cultural
+                        </option>
+
+                        <option value="Sports">
+                            Sports
+                        </option>
+
+                        <option value="Workshop">
+                            Workshop
+                        </option>
+
+                        <option value="Competition">
+                            Competition
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editEventDescription">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="editEventDescription"
+                        required></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editEventDate">
+                        Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="editEventDate"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editEventTime">
+                        Time
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editEventTime"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editEventVenue">
+                        Venue
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editEventVenue"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editEventOrganizer">
+                        Organizer
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editEventOrganizer"
+                        required>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="admin-btn">
+                    Update Event
+                </button>
+
+                <button
+                    type="button"
+                    class="cancel-btn"
+                    onclick="closeModal('editEventModal')">
+                    Cancel
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================================== -->
+    <!-- ADD CLUB MODAL -->
+    <!-- ================================================== -->
+
+    <div id="clubModal" class="modal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h2>Add New Club</h2>
+
+                <button
+                    class="modal-close"
+                    onclick="closeModal('clubModal')">
+                    ×
+                </button>
+
+            </div>
+
+
+            <form onsubmit="addClub(event)">
+
+                <div class="form-group">
+
+                    <label for="clubName">
+                        Club Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="clubName"
+                        placeholder="Example: Coding Club"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="clubCategory">
+                        Category
+                    </label>
+
+                    <select id="clubCategory" required>
+
+                        <option value="">
+                            Select Category
+                        </option>
+
+                        <option value="Technical">
+                            Technical
+                        </option>
+
+                        <option value="Creative">
+                            Creative
+                        </option>
+
+                        <option value="Cultural">
+                            Cultural
+                        </option>
+
+                        <option value="Sports">
+                            Sports
+                        </option>
+
+                        <option value="Business">
+                            Business
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="clubDescription">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="clubDescription"
+                        placeholder="Describe the club"
+                        required></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="clubCoordinator">
+                        Coordinator
+                    </label>
+
+                    <input
+                        type="text"
+                        id="clubCoordinator"
+                        placeholder="Club coordinator"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="clubMeetingDay">
+                        Meeting Day
+                    </label>
+
+                    <input
+                        type="text"
+                        id="clubMeetingDay"
+                        placeholder="Example: Friday"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="clubMeetingTime">
+                        Meeting Time
+                    </label>
+
+                    <input
+                        type="text"
+                        id="clubMeetingTime"
+                        placeholder="Example: 4:00 PM"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="clubVenue">
+                        Venue
+                    </label>
+
+                    <input
+                        type="text"
+                        id="clubVenue"
+                        placeholder="Example: Computer Lab"
+                        required>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="admin-btn">
+                    Add Club
+                </button>
+
+                <button
+                    type="button"
+                    class="cancel-btn"
+                    onclick="closeModal('clubModal')">
+                    Cancel
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================================== -->
+    <!-- EDIT CLUB MODAL -->
+    <!-- ================================================== -->
+
+    <div id="editClubModal" class="modal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h2>Edit Club</h2>
+
+                <button
+                    class="modal-close"
+                    onclick="closeModal('editClubModal')">
+                    ×
+                </button>
+
+            </div>
+
+
+            <form onsubmit="updateClub(event)">
+
+                <input
+                    type="hidden"
+                    id="editClubId">
+
+
+                <div class="form-group">
+
+                    <label for="editClubName">
+                        Club Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editClubName"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editClubCategory">
+                        Category
+                    </label>
+
+                    <select id="editClubCategory" required>
+
+                        <option value="Technical">
+                            Technical
+                        </option>
+
+                        <option value="Creative">
+                            Creative
+                        </option>
+
+                        <option value="Cultural">
+                            Cultural
+                        </option>
+
+                        <option value="Sports">
+                            Sports
+                        </option>
+
+                        <option value="Business">
+                            Business
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editClubDescription">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="editClubDescription"
+                        required></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editClubCoordinator">
+                        Coordinator
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editClubCoordinator"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editClubMeetingDay">
+                        Meeting Day
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editClubMeetingDay"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editClubMeetingTime">
+                        Meeting Time
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editClubMeetingTime"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editClubVenue">
+                        Venue
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editClubVenue"
+                        required>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="admin-btn">
+                    Update Club
+                </button>
+
+                <button
+                    type="button"
+                    class="cancel-btn"
+                    onclick="closeModal('editClubModal')">
+                    Cancel
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================================== -->
+    <!-- ADD ANNOUNCEMENT MODAL -->
+    <!-- ================================================== -->
+
+    <div id="announcementModal" class="modal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h2>Add Announcement</h2>
+
+                <button
+                    class="modal-close"
+                    onclick="closeModal('announcementModal')">
+                    ×
+                </button>
+
+            </div>
+
+
+            <form onsubmit="addAnnouncement(event)">
+
+                <div class="form-group">
+
+                    <label for="announcementTitle">
+                        Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="announcementTitle"
+                        placeholder="Announcement title"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="announcementCategory">
+                        Category
+                    </label>
+
+                    <select
+                        id="announcementCategory"
+                        required>
+
+                        <option value="">
+                            Select Category
+                        </option>
+
+                        <option value="Academic">
+                            Academic
+                        </option>
+
+                        <option value="Event">
+                            Event
+                        </option>
+
+                        <option value="Workshop">
+                            Workshop
+                        </option>
+
+                        <option value="Sports">
+                            Sports
+                        </option>
+
+                        <option value="Club">
+                            Club
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="announcementDescription">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="announcementDescription"
+                        placeholder="Announcement details"
+                        required></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="admin-btn">
+                    Publish Announcement
+                </button>
+
+                <button
+                    type="button"
+                    class="cancel-btn"
+                    onclick="closeModal('announcementModal')">
+                    Cancel
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+
+    <script src="../js/admin.js"></script>
+
+</body>
+
+</html>

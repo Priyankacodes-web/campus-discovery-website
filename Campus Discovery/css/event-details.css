@@ -1,0 +1,263 @@
+.breadcrumb {
+    padding: 25px 8%;
+    background: #f8f9fc;
+}
+
+.breadcrumb a {
+    color: #5b5bf7;
+    font-weight: 600;
+}
+
+
+/* EVENT HERO */
+
+.event-detail-hero {
+    padding: 50px 8%;
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 50px;
+    align-items: center;
+    background: white;
+}
+
+.detail-banner {
+    height: 300px;
+    border-radius: 15px;
+    background: #e9ecff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-banner span {
+    font-size: 120px;
+}
+
+.detail-category {
+    color: #5b5bf7;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.detail-header h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    margin: 10px 0 15px;
+}
+
+.detail-header > p {
+    color: #666;
+    font-size: 17px;
+    max-width: 650px;
+}
+
+
+.detail-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.detail-meta div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.detail-meta strong {
+    font-size: 13px;
+}
+
+.detail-meta span {
+    font-size: 14px;
+    color: #666;
+}
+
+
+/* MAIN CONTENT */
+
+.details-container {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 50px;
+    padding: 70px 8%;
+    background: #f8f9fc;
+}
+
+.details-main {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.detail-section {
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.detail-section h2 {
+    font-size: 26px;
+    margin-bottom: 18px;
+}
+
+.detail-section p {
+    color: #666;
+    margin-bottom: 12px;
+}
+
+
+/* EXPERIENCE */
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.experience-grid div {
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.experience-grid h3 {
+    font-size: 17px;
+    margin: 8px 0;
+}
+
+.experience-grid p {
+    font-size: 13px;
+}
+
+
+/* GUIDELINES */
+
+.guidelines {
+    padding-left: 20px;
+}
+
+.guidelines li {
+    margin: 12px 0;
+    color: #666;
+}
+
+
+/* ORGANIZER */
+
+.organizer-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.organizer-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #eef0ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.organizer-box h3 {
+    margin-bottom: 3px;
+}
+
+.organizer-box p {
+    margin: 0;
+    font-size: 13px;
+}
+
+
+/* REGISTRATION */
+
+.registration-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.06);
+}
+
+.registration-top span {
+    color: #5b5bf7;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.registration-top h2 {
+    font-size: 25px;
+    margin: 7px 0;
+}
+
+.registration-top p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+
+.registration-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.registration-card label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.registration-card input,
+.registration-card select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    margin-bottom: 18px;
+    outline: none;
+    font-size: 14px;
+}
+
+.registration-card input:focus,
+.registration-card select:focus {
+    border-color: #5b5bf7;
+}
+
+
+.register-btn {
+    border: none;
+    background: #5b5bf7;
+    color: white;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    background: #4646d8;
+}
+
+
+.registration-message {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 7px;
+    display: none;
+    background: #e8f7f1;
+    color: #16704d;
+    font-size: 13px;
+}

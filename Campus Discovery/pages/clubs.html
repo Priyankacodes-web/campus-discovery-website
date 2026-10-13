@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clubs | Campus Discovery</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/clubs.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Campus<span>Discovery</span></div>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="clubs.html" class="active">Clubs</a>
+            <a href="announcements.html">Announcements</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Campus Clubs</h1>
+            <p>
+                Explore student clubs, discover your interests,
+                and become part of the campus community.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Club Search -->
+    <section class="clubs-section">
+
+        <div class="container">
+
+            <div class="club-controls">
+
+                <input
+                    type="text"
+                    id="clubSearch"
+                    class="club-search"
+                    placeholder="Search clubs..."
+                    onkeyup="searchClubs()"
+                >
+
+                <select id="clubCategory" onchange="filterClubs()">
+                    <option value="all">All Categories</option>
+                    <option value="technical">Technical</option>
+                    <option value="creative">Creative</option>
+                    <option value="cultural">Cultural</option>
+                    <option value="sports">Sports</option>
+                    <option value="business">Business</option>
+                </select>
+
+            </div>
+
+
+            <!-- Clubs Grid -->
+            <div class="clubs-grid" id="clubsGrid">
+
+                <!-- Coding Club -->
+                <div class="club-card" data-category="technical" data-name="coding club">
+
+                    <div class="club-icon technical-icon">
+                        💻
+                    </div>
+
+                    <div class="club-content">
+
+                        <span class="club-category">Technical</span>
+
+                        <h2>Coding Club</h2>
+
+                        <p>
+                            Learn programming, problem solving,
+                            competitive coding and software development.
+                        </p>
+
+                        <div class="club-info">
+                            <span>👥 85 Members</span>
+                            <span>📅 Weekly</span>
+                        </div>
+
+                        <a href="#" class="club-btn">
+                            Explore Club →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Robotics Club -->
+                <div class="club-card" data-category="technical" data-name="robotics club">
+
+                    <div class="club-icon robotics-icon">
+                        🤖
+                    </div>
+
+                    <div class="club-content">
+
+                        <span class="club-category">Technical</span>
+
+                        <h2>Robotics Club</h2>
+
+                        <p>
+                            Build robots, explore automation,
+                            electronics and innovative technologies.
+                        </p>
+
+                        <div class="club-info">
+                            <span>👥 52 Members</span>
+                            <span>📅 Weekly</span>
+                        </div>
+
+                        <a href="#" class="club-btn">
+                            Explore Club →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AI Club -->
+                <div class="club-card" data-category="technical" data-name="ai club">
+
+                    <div class="club-icon ai-icon">
+                        🧠
+                    </div>
+
+                    <div class="club-content">
+
+                        <span class="club-category">Technical</span>
+
+                        <h2>AI & ML Club</h2>
+
+                        <p>
+                            Explore Artificial Intelligence,
+                            Machine Learning and emerging technologies.
+                        </p>
+
+                        <div class="club-info">
+                            <span>👥 64 Members</span>
+                            <span>📅 Bi-Weekly</span>
+                        </div>
+
+                        <a href="#" class="club-btn">
+                            Explore Club →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Photography Club -->
+                <div class="club-card" data-category="creative" data-name="photography club">
+
+                    <div class="club-icon photography-icon">
+                        📷
+                    </div>
+
+                    <div class="club-content">
+
+                        <span class="club-category">Creative</span>
+
+                        <h2>Photography Club</h2>
+
+                        <p>
+                            Capture campus moments, learn photography
+                            and improve your creative skills.
+                        </p>
+
+                        <div class="club-info">
+                            <span>👥 45 Members</span>
+                            <span>📅 Weekly</span>
+                        </div>
+
+                        <a href="#" class="club-btn">
+                            Explore Club →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Cultural Club -->
+                <div class="club-card" data-category="cultural" data-name="cultural club">
+
+                    <div class="club-icon cultural-icon">
+                        🎭
+                    </div>
+
+                    <div class="club-content">
+
+                        <span class="club-category">Cultural</span>
+
+                        <h2>Cultural Club</h2>
+
+                        <p>
+                            Celebrate music, dance, drama and
+                            the diverse culture of our campus.
+                        </p>
+
+                        <div class="club-info">
+                            <span>👥 90 Members</span>
+                            <span>📅 Weekly</span>
+                        </div>
+
+                        <a href="#" class="club-btn">
+                            Explore Club →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Sports Club -->
+                <div class="club-card" data-category="sports" data-name="sports club">
+
+                    <div class="club-icon sports-icon">
+                        🏆
+                    </div>
+
+                    <div class="club-content">
+
+                        <span class="club-category">Sports</span>
+
+                        <h2>Sports Club</h2>
+
+                        <p>
+                            Participate in sports activities,
+                            tournaments and fitness events.
+                        </p>
+
+                        <div class="club-info">
+                            <span>👥 110 Members</span>
+                            <span>📅 Regular</span>
+                        </div>
+
+                        <a href="#" class="club-btn">
+                            Explore Club →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Music Club -->
+                <div class="club-card" data-category="cultural" data-name="music club">
+
+                    <div class="club-icon music-icon">
+                        🎵
+                    </div>
+
+                    <div class="club-content">
+
+                        <span class="club-category">Cultural</span>
+
+                        <h2>Music Club</h2>
+
+                        <p>
+                            Bring musicians together and participate
+                            in performances and music sessions.
+                        </p>
+
+                        <div class="club-info">
+                            <span>👥 48 Members</span>
+                            <span>📅 Weekly</span>
+                        </div>
+
+                        <a href="#" class="club-btn">
+                            Explore Club →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Entrepreneurship Club -->
+                <div class="club-card" data-category="business" data-name="entrepreneurship club">
+
+                    <div class="club-icon business-icon">
+                        💡
+                    </div>
+
+                    <div class="club-content">
+
+                        <span class="club-category">Business</span>
+
+                        <h2>Entrepreneurship Club</h2>
+
+                        <p>
+                            Develop startup ideas, business skills
+                            and entrepreneurial thinking.
+                        </p>
+
+                        <div class="club-info">
+                            <span>👥 57 Members</span>
+                            <span>📅 Bi-Weekly</span>
+                        </div>
+
+                        <a href="#" class="club-btn">
+                            Explore Club →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- No Clubs -->
+            <div id="noClubs" class="no-clubs">
+                <h2>No clubs found</h2>
+                <p>Try searching with another keyword.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Join CTA -->
+    <section class="club-cta">
+
+        <div class="container">
+
+            <h2>Find Your Community</h2>
+
+            <p>
+                Join a club, meet new people and make your
+                campus experience more exciting.
+            </p>
+
+            <a href="login.html" class="primary-btn">
+                Join a Club
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div>
+                <h3>CampusDiscovery</h3>
+                <p>
+                    Discover events, clubs and opportunities
+                    happening around your campus.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="../index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="clubs.html">Clubs</a>
+                <a href="announcements.html">Announcements</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 CampusDiscovery. All Rights Reserved.
+        </div>
+
+    </footer>
+
+
+    <script src="../js/clubs.js"></script>
+
+</body>
+</html>

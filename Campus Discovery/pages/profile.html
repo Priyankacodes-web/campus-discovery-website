@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Profile | Campus Discovery</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Campus<span>Discovery</span>
+        </div>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="clubs.html">Clubs</a>
+            <a href="announcements.html">Announcements</a>
+            <a href="profile.html" class="active">Profile</a>
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         PROFILE HEADER
+    ========================== -->
+
+    <section class="profile-header">
+
+        <div class="container profile-header-content">
+
+            <div class="profile-avatar">
+                👤
+            </div>
+
+            <div class="profile-intro">
+
+                <h1 id="displayProfileName">
+                    Student
+                </h1>
+
+                <p id="displayProfileDepartment">
+                    Department
+                </p>
+
+                <span>
+                    🎓 Student ID:
+                    <span id="displayProfileStudentId">
+                        Not available
+                    </span>
+                </span>
+
+            </div>
+
+            <button
+                class="edit-profile-btn"
+                onclick="toggleEditProfile()">
+
+                ✏️ Edit Profile
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROFILE DASHBOARD
+    ========================== -->
+
+    <section class="profile-section">
+
+        <div class="container">
+
+
+            <!-- =========================
+                 STATISTICS
+            ========================== -->
+
+            <div class="profile-stats">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        📅
+                    </div>
+
+                    <div>
+                        <h2>5</h2>
+                        <p>Events Registered</p>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        👥
+                    </div>
+
+                    <div>
+                        <h2>3</h2>
+                        <p>Clubs Joined</p>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        🏆
+                    </div>
+
+                    <div>
+                        <h2>2</h2>
+                        <p>Events Attended</p>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ⭐
+                    </div>
+
+                    <div>
+                        <h2>8</h2>
+                        <p>Activities</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 MAIN PROFILE GRID
+            ========================== -->
+
+            <div class="profile-grid">
+
+
+                <!-- =========================
+                     PERSONAL INFORMATION
+                ========================== -->
+
+                <div class="profile-card">
+
+                    <div class="card-heading">
+
+                        <h2>Personal Information</h2>
+
+                    </div>
+
+
+                    <div class="info-list">
+
+                        <div class="info-item">
+
+                            <span class="info-label">
+                                Full Name
+                            </span>
+
+                            <span
+                                class="info-value"
+                                id="displayInfoName">
+                                Student
+                            </span>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span class="info-label">
+                                Email
+                            </span>
+
+                            <span
+                                class="info-value"
+                                id="displayInfoEmail">
+                                Not available
+                            </span>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span class="info-label">
+                                Student ID
+                            </span>
+
+                            <span
+                                class="info-value"
+                                id="displayInfoStudentId">
+                                Not available
+                            </span>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span class="info-label">
+                                Department
+                            </span>
+
+                            <span
+                                class="info-value"
+                                id="displayInfoDepartment">
+                                Not available
+                            </span>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span class="info-label">
+                                Year
+                            </span>
+
+                            <span class="info-value">
+                                2nd Year
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     MY CLUBS
+                ========================== -->
+
+                <div class="profile-card">
+
+                    <div class="card-heading">
+
+                        <h2>My Clubs</h2>
+
+                        <a href="clubs.html">
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <div class="club-list">
+
+                        <div class="mini-club">
+
+                            <div class="mini-club-icon">
+                                💻
+                            </div>
+
+                            <div>
+                                <h3>Coding Club</h3>
+                                <p>Technical</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="mini-club">
+
+                            <div class="mini-club-icon">
+                                🤖
+                            </div>
+
+                            <div>
+                                <h3>Robotics Club</h3>
+                                <p>Technical</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="mini-club">
+
+                            <div class="mini-club-icon">
+                                📷
+                            </div>
+
+                            <div>
+                                <h3>Photography Club</h3>
+                                <p>Creative</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     REGISTERED EVENTS
+                ========================== -->
+
+                <div class="profile-card full-width">
+
+                    <div class="card-heading">
+
+                        <h2>My Registered Events</h2>
+
+                        <a href="events.html">
+                            Explore Events
+                        </a>
+
+                    </div>
+
+
+                    <div class="registered-events">
+
+
+                        <div class="registered-event">
+
+                            <div class="event-date-box">
+
+                                <strong>25</strong>
+                                <span>SEP</span>
+
+                            </div>
+
+                            <div class="registered-event-info">
+
+                                <h3>
+                                    Campus Hackathon 2026
+                                </h3>
+
+                                <p>
+                                    📍 Main Auditorium
+                                </p>
+
+                                <span class="status upcoming">
+                                    Upcoming
+                                </span>
+
+                            </div>
+
+                            <a
+                                href="event-details.html"
+                                class="view-event-btn">
+
+                                View
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="registered-event">
+
+                            <div class="event-date-box">
+
+                                <strong>28</strong>
+                                <span>SEP</span>
+
+                            </div>
+
+                            <div class="registered-event-info">
+
+                                <h3>
+                                    AI & Machine Learning Workshop
+                                </h3>
+
+                                <p>
+                                    📍 Computer Lab 2
+                                </p>
+
+                                <span class="status upcoming">
+                                    Upcoming
+                                </span>
+
+                            </div>
+
+                            <a
+                                href="event-details.html"
+                                class="view-event-btn">
+
+                                View
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="registered-event">
+
+                            <div class="event-date-box">
+
+                                <strong>02</strong>
+                                <span>OCT</span>
+
+                            </div>
+
+                            <div class="registered-event-info">
+
+                                <h3>
+                                    UI/UX Design Competition
+                                </h3>
+
+                                <p>
+                                    📍 Innovation Hall
+                                </p>
+
+                                <span class="status upcoming">
+                                    Upcoming
+                                </span>
+
+                            </div>
+
+                            <a
+                                href="event-details.html"
+                                class="view-event-btn">
+
+                                View
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     EDIT PROFILE
+                ========================== -->
+
+                <div
+                    class="profile-card full-width edit-card"
+                    id="editProfileCard">
+
+                    <div class="card-heading">
+
+                        <h2>Edit Profile</h2>
+
+                    </div>
+
+
+                    <form
+                        id="profileForm"
+                        onsubmit="saveProfile(event)">
+
+
+                        <div class="profile-form-grid">
+
+
+                            <!-- Full Name -->
+
+                            <div class="form-group">
+
+                                <label for="profileName">
+                                    Full Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="profileName"
+                                    placeholder="Enter your full name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- Email -->
+
+                            <div class="form-group">
+
+                                <label for="profileEmail">
+                                    Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="profileEmail"
+                                    placeholder="Enter your email"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- Student ID -->
+
+                            <div class="form-group">
+
+                                <label for="profileStudentId">
+                                    Student ID
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="profileStudentId"
+                                    disabled
+                                >
+
+                            </div>
+
+
+                            <!-- Department -->
+
+                            <div class="form-group">
+
+                                <label for="profileDepartment">
+                                    Department
+                                </label>
+
+                                <select id="profileDepartment">
+
+                                    <option value="CSE">
+                                        Computer Science & Engineering
+                                    </option>
+
+                                    <option value="ECE">
+                                        Electronics & Communication
+                                    </option>
+
+                                    <option value="EEE">
+                                        Electrical Engineering
+                                    </option>
+
+                                    <option value="ME">
+                                        Mechanical Engineering
+                                    </option>
+
+                                    <option value="CE">
+                                        Civil Engineering
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="save-profile-btn">
+
+                            Save Changes
+
+                        </button>
+
+                    </form>
+
+
+                    <div
+                        id="profileMessage"
+                        class="profile-message">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>CampusDiscovery</h3>
+
+                <p>
+                    Discover events, clubs and opportunities
+                    happening around your campus.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="events.html">
+                    Events
+                </a>
+
+                <a href="clubs.html">
+                    Clubs
+                </a>
+
+                <a href="announcements.html">
+                    Announcements
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 CampusDiscovery. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/profile.js"></script>
+
+</body>
+
+</html>

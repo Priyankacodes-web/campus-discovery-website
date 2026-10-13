@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Discovery</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>Campus</span> Discovery
+        </div>
+
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="pages/events.html">Events</a>
+            <a href="pages/clubs.html">Clubs</a>
+            <a href="pages/announcements.html">Announcements</a>
+        </nav>
+
+        <a href="pages/login.html" class="login-btn">
+            Login
+        </a>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="hero-tag">
+                🎓 YOUR CAMPUS, YOUR COMMUNITY
+            </p>
+
+            <h1>
+                Discover What's<br>
+                <span>Happening Around You.</span>
+            </h1>
+
+            <p class="hero-description">
+                Find campus events, clubs, workshops, competitions
+                and activities — all in one place.
+            </p>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    placeholder="Search events, clubs, workshops..."
+                    id="searchInput"
+                >
+
+                <button onclick="searchEvents()">
+                    🔍 Search
+                </button>
+
+            </div>
+
+            <div class="hero-buttons">
+
+                <a href="pages/events.html" class="primary-btn">
+                    Explore Events →
+                </a>
+
+                <a href="pages/clubs.html" class="secondary-btn">
+                    Discover Clubs
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+
+    <section class="categories">
+
+        <div class="section-heading">
+
+            <p>EXPLORE</p>
+
+            <h2>
+                Find Something <span>You Love</span>
+            </h2>
+
+        </div>
+
+
+        <div class="category-container">
+
+            <a href="pages/events.html?category=technical"
+               class="category-card">
+
+                <div class="category-icon">💻</div>
+
+                <h3>Technical</h3>
+
+                <p>Hackathons, coding & tech events</p>
+
+            </a>
+
+
+            <a href="pages/events.html?category=cultural"
+               class="category-card">
+
+                <div class="category-icon">🎭</div>
+
+                <h3>Cultural</h3>
+
+                <p>Festivals, music & performances</p>
+
+            </a>
+
+
+            <a href="pages/events.html?category=sports"
+               class="category-card">
+
+                <div class="category-icon">🏆</div>
+
+                <h3>Sports</h3>
+
+                <p>Tournaments & sporting events</p>
+
+            </a>
+
+
+            <a href="pages/events.html?category=workshop"
+               class="category-card">
+
+                <div class="category-icon">🧠</div>
+
+                <h3>Workshops</h3>
+
+                <p>Learn new skills & technologies</p>
+
+            </a>
+
+
+            <a href="pages/events.html?category=competition"
+               class="category-card">
+
+                <div class="category-icon">🚀</div>
+
+                <h3>Competitions</h3>
+
+                <p>Show your talent & compete</p>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- UPCOMING EVENTS -->
+
+    <section class="events-section">
+
+        <div class="section-top">
+
+            <div>
+
+                <p class="section-label">
+                    DON'T MISS OUT
+                </p>
+
+                <h2>
+                    Upcoming <span>Events</span>
+                </h2>
+
+            </div>
+
+            <a href="pages/events.html" class="view-all">
+                View All Events →
+            </a>
+
+        </div>
+
+
+        <div class="event-container">
+
+
+            <!-- EVENT 1 -->
+
+            <div class="event-card">
+
+                <div class="event-image technical">
+                    💻
+                </div>
+
+                <div class="event-content">
+
+                    <span class="event-category">
+                        TECHNICAL
+                    </span>
+
+                    <h3>
+                        Campus Hackathon 2026
+                    </h3>
+
+                    <p>
+                        Build innovative solutions and compete
+                        with talented students.
+                    </p>
+
+                    <div class="event-info">
+                        📅 25 September 2026
+                    </div>
+
+                    <div class="event-info">
+                        📍 Innovation Lab
+                    </div>
+
+                    <a href="pages/event-details.html"
+                       class="event-btn">
+                        View Details →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- EVENT 2 -->
+
+            <div class="event-card">
+
+                <div class="event-image workshop">
+                    🧠
+                </div>
+
+                <div class="event-content">
+
+                    <span class="event-category">
+                        WORKSHOP
+                    </span>
+
+                    <h3>
+                        AI & Machine Learning Workshop
+                    </h3>
+
+                    <p>
+                        Learn the fundamentals of AI and
+                        machine learning.
+                    </p>
+
+                    <div class="event-info">
+                        📅 28 September 2026
+                    </div>
+
+                    <div class="event-info">
+                        📍 Seminar Hall
+                    </div>
+
+                    <a href="pages/event-details.html"
+                       class="event-btn">
+                        View Details →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- EVENT 3 -->
+
+            <div class="event-card">
+
+                <div class="event-image cultural">
+                    🎭
+                </div>
+
+                <div class="event-content">
+
+                    <span class="event-category">
+                        CULTURAL
+                    </span>
+
+                    <h3>
+                        Campus Cultural Fest
+                    </h3>
+
+                    <p>
+                        Celebrate music, dance, art and
+                        campus culture.
+                    </p>
+
+                    <div class="event-info">
+                        📅 2 October 2026
+                    </div>
+
+                    <div class="event-info">
+                        📍 Main Auditorium
+                    </div>
+
+                    <a href="pages/event-details.html"
+                       class="event-btn">
+                        View Details →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CLUBS -->
+
+    <section class="clubs-section">
+
+        <div class="section-heading">
+
+            <p>CONNECT & GROW</p>
+
+            <h2>
+                Discover Campus <span>Clubs</span>
+            </h2>
+
+            <p>
+                Join communities that match your interests,
+                skills and passions.
+            </p>
+
+        </div>
+
+
+        <div class="club-container">
+
+            <div class="club-card">
+                <div class="club-icon">💻</div>
+                <h3>Coding Club</h3>
+                <p>Programming & development</p>
+                <a href="pages/clubs.html">Explore →</a>
+            </div>
+
+            <div class="club-card">
+                <div class="club-icon">🤖</div>
+                <h3>Robotics Club</h3>
+                <p>Robotics & innovation</p>
+                <a href="pages/clubs.html">Explore →</a>
+            </div>
+
+            <div class="club-card">
+                <div class="club-icon">📸</div>
+                <h3>Photography Club</h3>
+                <p>Photography & creativity</p>
+                <a href="pages/clubs.html">Explore →</a>
+            </div>
+
+            <div class="club-card">
+                <div class="club-icon">🎨</div>
+                <h3>Arts Club</h3>
+                <p>Art & creative expression</p>
+                <a href="pages/clubs.html">Explore →</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <h2>
+            Never Miss What's Happening
+        </h2>
+
+        <p>
+            Stay updated with the latest campus events,
+            workshops and announcements.
+        </p>
+
+        <a href="pages/login.html" class="primary-btn">
+            Join Campus Discovery →
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            Campus <span>Discovery</span>
+        </div>
+
+        <p>
+            Discover. Participate. Connect.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="index.html">Home</a>
+            <a href="pages/events.html">Events</a>
+            <a href="pages/clubs.html">Clubs</a>
+            <a href="pages/announcements.html">
+                Announcements
+            </a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 Campus Discovery. Academic Project.
+        </p>
+
+    </footer>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

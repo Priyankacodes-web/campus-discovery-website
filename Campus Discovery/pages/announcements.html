@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Announcements | Campus Discovery</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/announcements.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <div class="logo">
+            Campus<span>Discovery</span>
+        </div>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="clubs.html">Clubs</a>
+            <a href="announcements.html" class="active">
+                Announcements
+            </a>
+            <a href="login.html">Login</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Page Header -->
+    <section class="page-header">
+
+        <div class="container">
+
+            <h1>Campus Announcements</h1>
+
+            <p>
+                Stay updated with the latest campus news,
+                notices and important information.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Announcements Section -->
+    <section class="announcements-section">
+
+        <div class="container">
+
+            <!-- Search -->
+            <div class="announcement-search-box">
+
+                <input
+                    type="text"
+                    id="announcementSearch"
+                    placeholder="Search announcements..."
+                    onkeyup="searchAnnouncements()"
+                >
+
+            </div>
+
+
+            <!-- Announcements List -->
+            <div class="announcements-list" id="announcementsList">
+
+
+                <!-- Announcement 1 -->
+                <div
+                    class="announcement-card"
+                    data-title="Campus Hackathon 2026 Registration Open"
+                >
+
+                    <div class="announcement-date">
+
+                        <span class="date-day">20</span>
+                        <span class="date-month">SEP</span>
+
+                    </div>
+
+                    <div class="announcement-content">
+
+                        <span class="announcement-tag event-tag">
+                            Event
+                        </span>
+
+                        <h2>
+                            Campus Hackathon 2026 Registration Open
+                        </h2>
+
+                        <p>
+                            Registration is now open for Campus Hackathon
+                            2026. Students can register individually or
+                            participate as a team.
+                        </p>
+
+                        <div class="announcement-meta">
+                            📅 Published: September 20, 2026
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Announcement 2 -->
+                <div
+                    class="announcement-card"
+                    data-title="AI and Machine Learning Workshop"
+                >
+
+                    <div class="announcement-date">
+
+                        <span class="date-day">18</span>
+                        <span class="date-month">SEP</span>
+
+                    </div>
+
+                    <div class="announcement-content">
+
+                        <span class="announcement-tag workshop-tag">
+                            Workshop
+                        </span>
+
+                        <h2>
+                            AI & Machine Learning Workshop
+                        </h2>
+
+                        <p>
+                            The AI & ML Club is organizing a hands-on
+                            workshop covering the fundamentals of
+                            Artificial Intelligence and Machine Learning.
+                        </p>
+
+                        <div class="announcement-meta">
+                            📅 Published: September 18, 2026
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Announcement 3 -->
+                <div
+                    class="announcement-card"
+                    data-title="Mid Semester Examination Schedule"
+                >
+
+                    <div class="announcement-date">
+
+                        <span class="date-day">15</span>
+                        <span class="date-month">SEP</span>
+
+                    </div>
+
+                    <div class="announcement-content">
+
+                        <span class="announcement-tag academic-tag">
+                            Academic
+                        </span>
+
+                        <h2>
+                            Mid-Semester Examination Schedule
+                        </h2>
+
+                        <p>
+                            The mid-semester examination schedule has
+                            been released. Students are advised to check
+                            their respective department schedules.
+                        </p>
+
+                        <div class="announcement-meta">
+                            📅 Published: September 15, 2026
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Announcement 4 -->
+                <div
+                    class="announcement-card"
+                    data-title="Inter College Cricket Tournament"
+                >
+
+                    <div class="announcement-date">
+
+                        <span class="date-day">12</span>
+                        <span class="date-month">SEP</span>
+
+                    </div>
+
+                    <div class="announcement-content">
+
+                        <span class="announcement-tag sports-tag">
+                            Sports
+                        </span>
+
+                        <h2>
+                            Inter-College Cricket Tournament
+                        </h2>
+
+                        <p>
+                            Registration for the upcoming inter-college
+                            cricket tournament is now open. Interested
+                            students can contact the Sports Club.
+                        </p>
+
+                        <div class="announcement-meta">
+                            📅 Published: September 12, 2026
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Announcement 5 -->
+                <div
+                    class="announcement-card"
+                    data-title="Photography Club Recruitment"
+                >
+
+                    <div class="announcement-date">
+
+                        <span class="date-day">10</span>
+                        <span class="date-month">SEP</span>
+
+                    </div>
+
+                    <div class="announcement-content">
+
+                        <span class="announcement-tag club-tag">
+                            Club
+                        </span>
+
+                        <h2>
+                            Photography Club Recruitment
+                        </h2>
+
+                        <p>
+                            The Photography Club is inviting students
+                            interested in photography, editing and
+                            visual storytelling to join the club.
+                        </p>
+
+                        <div class="announcement-meta">
+                            📅 Published: September 10, 2026
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- No Results -->
+            <div id="noAnnouncements" class="no-announcements">
+
+                <h2>No announcements found</h2>
+
+                <p>
+                    Try searching with a different keyword.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="announcement-cta">
+
+        <div class="container">
+
+            <h2>Stay Connected With Campus</h2>
+
+            <p>
+                Never miss an important update, event or opportunity.
+            </p>
+
+            <a href="events.html" class="primary-btn">
+                Explore Events
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div>
+                <h3>CampusDiscovery</h3>
+
+                <p>
+                    Discover events, clubs and opportunities
+                    happening around your campus.
+                </p>
+            </div>
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <a href="../index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="clubs.html">Clubs</a>
+                <a href="announcements.html">Announcements</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            © 2026 CampusDiscovery. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/announcements.js"></script>
+
+</body>
+
+</html>

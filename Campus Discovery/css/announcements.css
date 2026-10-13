@@ -1,0 +1,239 @@
+/* =========================
+   ANNOUNCEMENTS PAGE
+========================= */
+
+.announcements-section {
+    padding: 60px 0;
+    background: #f7f8fc;
+}
+
+
+/* Search */
+
+.announcement-search-box {
+    margin-bottom: 35px;
+}
+
+.announcement-search-box input {
+    width: 100%;
+    padding: 16px 20px;
+
+    border: 1px solid #ddd;
+    border-radius: 12px;
+
+    font-size: 16px;
+    outline: none;
+
+    box-sizing: border-box;
+}
+
+.announcement-search-box input:focus {
+    border-color: #5b5bf7;
+}
+
+
+/* Announcement List */
+
+.announcements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* Announcement Card */
+
+.announcement-card {
+    display: flex;
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    gap: 25px;
+
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s ease;
+}
+
+.announcement-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Date */
+
+.announcement-date {
+    width: 80px;
+    min-width: 80px;
+    height: 80px;
+
+    border-radius: 12px;
+
+    background: #eeeeff;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.date-day {
+    font-size: 28px;
+    font-weight: 800;
+
+    color: #5b5bf7;
+}
+
+.date-month {
+    font-size: 12px;
+    font-weight: 700;
+
+    color: #555;
+}
+
+
+/* Content */
+
+.announcement-content {
+    flex: 1;
+}
+
+.announcement-content h2 {
+    margin: 8px 0 10px;
+
+    color: #181a2a;
+
+    font-size: 21px;
+}
+
+.announcement-content p {
+    color: #666;
+
+    line-height: 1.7;
+
+    margin-bottom: 12px;
+}
+
+
+/* Tags */
+
+.announcement-tag {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+/* Tag styles */
+
+.event-tag {
+    background: #eeeeff;
+    color: #5b5bf7;
+}
+
+.workshop-tag {
+    background: #e5f7ff;
+    color: #0084ad;
+}
+
+.academic-tag {
+    background: #fff0df;
+    color: #c26b00;
+}
+
+.sports-tag {
+    background: #e5f8e8;
+    color: #16853a;
+}
+
+.club-tag {
+    background: #ffe5ee;
+    color: #d43b6a;
+}
+
+
+/* Meta */
+
+.announcement-meta {
+    font-size: 13px;
+    color: #888;
+}
+
+
+/* No announcements */
+
+.no-announcements {
+    display: none;
+
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+.no-announcements h2 {
+    margin-bottom: 10px;
+}
+
+.no-announcements p {
+    color: #777;
+}
+
+
+/* CTA */
+
+.announcement-cta {
+    padding: 70px 20px;
+
+    text-align: center;
+
+    background: #5b5bf7;
+
+    color: white;
+}
+
+.announcement-cta h2 {
+    font-size: 32px;
+
+    margin-bottom: 12px;
+}
+
+.announcement-cta p {
+    margin-bottom: 25px;
+}
+
+.announcement-cta .primary-btn {
+    background: white;
+    color: #5b5bf7;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .announcement-card {
+        flex-direction: column;
+    }
+
+    .announcement-date {
+        width: 70px;
+        min-width: 70px;
+    }
+
+}

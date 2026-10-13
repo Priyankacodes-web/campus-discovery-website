@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Event Details | Campus Discovery</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="../css/responsive.css">
+
+    <link rel="stylesheet"
+          href="../css/event-details.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>Campus</span> Discovery
+        </div>
+
+
+        <nav>
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="events.html"
+               class="active">
+                Events
+            </a>
+
+            <a href="clubs.html">
+                Clubs
+            </a>
+
+            <a href="announcements.html">
+                Announcements
+            </a>
+
+        </nav>
+
+
+        <a href="login.html"
+           class="login-btn">
+
+            Login
+
+        </a>
+
+    </header>
+
+
+
+    <!-- BREADCRUMB -->
+
+    <div class="breadcrumb">
+
+        <a href="events.html">
+            ← Back to Events
+        </a>
+
+    </div>
+
+
+
+    <!-- EVENT HERO -->
+
+    <section class="event-detail-hero">
+
+        <div class="detail-banner">
+
+            <span>
+                💻
+            </span>
+
+        </div>
+
+
+        <div class="detail-header">
+
+            <span class="detail-category"
+                  id="eventCategory">
+
+                EVENT
+
+            </span>
+
+
+            <h1 id="eventTitle">
+
+                Loading event...
+
+            </h1>
+
+
+            <p id="eventDescription">
+
+                Loading event description...
+
+            </p>
+
+
+            <div class="detail-meta">
+
+                <div>
+
+                    <strong>📅 Date</strong>
+
+                    <span id="eventDate">
+                        Loading...
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>🕐 Time</strong>
+
+                    <span id="eventTime">
+                        Loading...
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>📍 Venue</strong>
+
+                    <span id="eventVenue">
+                        Loading...
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="details-container">
+
+
+        <!-- LEFT CONTENT -->
+
+        <div class="details-main">
+
+
+            <!-- ABOUT EVENT -->
+
+            <section class="detail-section">
+
+                <h2>
+                    About the Event
+                </h2>
+
+
+                <p id="aboutEvent">
+
+                    Loading event information...
+
+                </p>
+
+            </section>
+
+
+
+            <!-- EXPERIENCE -->
+
+            <section class="detail-section">
+
+                <h2>
+                    What You'll Experience
+                </h2>
+
+
+                <div class="experience-grid">
+
+
+                    <div>
+
+                        💡
+
+                        <h3>
+                            Innovation
+                        </h3>
+
+                        <p>
+                            Turn your ideas into practical
+                            solutions.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        👥
+
+                        <h3>
+                            Teamwork
+                        </h3>
+
+                        <p>
+                            Collaborate with students
+                            from different backgrounds.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        🧠
+
+                        <h3>
+                            Problem Solving
+                        </h3>
+
+                        <p>
+                            Solve challenging real-world
+                            problems.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        🏆
+
+                        <h3>
+                            Recognition
+                        </h3>
+
+                        <p>
+                            Showcase your work and compete
+                            for exciting prizes.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- GUIDELINES -->
+
+            <section class="detail-section">
+
+                <h2>
+                    Event Guidelines
+                </h2>
+
+
+                <ul class="guidelines">
+
+                    <li>
+                        Participants can register individually
+                        or as a team.
+                    </li>
+
+                    <li>
+                        Teams can have up to 4 members.
+                    </li>
+
+                    <li>
+                        Participants should bring their
+                        required development equipment.
+                    </li>
+
+                    <li>
+                        All projects must be developed during
+                        the event period.
+                    </li>
+
+                    <li>
+                        Participants must follow the campus
+                        event guidelines.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+
+            <!-- ORGANIZER -->
+
+            <section class="detail-section">
+
+                <h2>
+                    Organizer
+                </h2>
+
+
+                <div class="organizer-box">
+
+                    <div class="organizer-icon">
+                        💻
+                    </div>
+
+
+                    <div>
+
+                        <h3 id="eventOrganizer">
+
+                            Loading...
+
+                        </h3>
+
+
+                        <p>
+                            Campus Technical Community
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+
+        <!-- REGISTRATION SIDEBAR -->
+
+        <aside class="registration-card">
+
+
+            <div class="registration-top">
+
+                <span>
+                    REGISTRATION
+                </span>
+
+
+                <h2>
+                    Join This Event
+                </h2>
+
+
+                <p>
+                    Reserve your spot for this campus event.
+                </p>
+
+            </div>
+
+
+
+            <!-- REGISTRATION FORM -->
+
+            <form id="registrationForm"
+                  onsubmit="registerEvent(event)">
+
+
+                <label>
+                    Full Name
+                </label>
+
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Enter your name"
+                    required>
+
+
+
+                <label>
+                    Email
+                </label>
+
+
+                <input
+                    type="email"
+                    id="studentEmail"
+                    placeholder="Enter your email"
+                    required>
+
+
+
+                <label>
+                    Student ID
+                </label>
+
+
+                <input
+                    type="text"
+                    id="studentId"
+                    placeholder="Enter student ID"
+                    required>
+
+
+
+                <label>
+                    Department
+                </label>
+
+
+                <select id="department"
+                        required>
+
+                    <option value="">
+                        Select Department
+                    </option>
+
+                    <option value="Computer Science">
+                        Computer Science
+                    </option>
+
+                    <option value="Information Technology">
+                        Information Technology
+                    </option>
+
+                    <option value="Electronics">
+                        Electronics
+                    </option>
+
+                    <option value="Mechanical">
+                        Mechanical
+                    </option>
+
+                    <option value="Civil">
+                        Civil
+                    </option>
+
+                    <option value="Electrical">
+                        Electrical
+                    </option>
+
+                </select>
+
+
+
+                <button
+                    type="submit"
+                    class="register-btn">
+
+                    Register Now →
+
+                </button>
+
+
+            </form>
+
+
+
+            <!-- REGISTRATION MESSAGE -->
+
+            <div
+                id="registrationMessage"
+                class="registration-message">
+
+            </div>
+
+
+        </aside>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+
+            Campus <span>Discovery</span>
+
+        </div>
+
+
+        <p>
+            Discover. Participate. Connect.
+        </p>
+
+
+        <div class="footer-links">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="events.html">
+                Events
+            </a>
+
+            <a href="clubs.html">
+                Clubs
+            </a>
+
+            <a href="announcements.html">
+                Announcements
+            </a>
+
+        </div>
+
+
+        <p class="copyright">
+
+            © 2026 Campus Discovery.
+            Academic Project.
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/event-details.js"></script>
+
+
+</body>
+
+</html>

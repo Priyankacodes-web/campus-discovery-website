@@ -1,0 +1,15 @@
+
+# Java / Maven build files
+**/target/
+
+# Local database and application configuration
+**/application.properties
+**/.env
+**/.env.*
+
+# Logs and editor settings
+*.log
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

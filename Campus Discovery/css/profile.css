@@ -1,0 +1,501 @@
+/* =========================
+   PROFILE PAGE
+========================= */
+
+.profile-header {
+    background: #5b5bf7;
+    color: white;
+    padding: 40px 20px;
+}
+
+.profile-header-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.profile-avatar {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 42px;
+}
+
+.profile-intro {
+    flex: 1;
+}
+
+.profile-intro h1 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.profile-intro p {
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+.profile-intro span {
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+.edit-profile-btn {
+    padding: 12px 20px;
+
+    border: 1px solid white;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: white;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.edit-profile-btn:hover {
+    background: white;
+    color: #5b5bf7;
+}
+
+
+/* Profile Section */
+
+.profile-section {
+    padding: 50px 0;
+    background: #f7f8fc;
+}
+
+
+/* Statistics */
+
+.profile-stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 12px;
+
+    background: #eeeeff;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 25px;
+}
+
+.stat-card h2 {
+    font-size: 25px;
+    margin-bottom: 3px;
+}
+
+.stat-card p {
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* Grid */
+
+.profile-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+
+/* Cards */
+
+.profile-card {
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+
+/* Heading */
+
+.card-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.card-heading h2 {
+    font-size: 20px;
+    color: #181a2a;
+}
+
+.card-heading a {
+    text-decoration: none;
+
+    color: #5b5bf7;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* Information */
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #eee;
+
+    gap: 20px;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    color: #888;
+    font-size: 14px;
+}
+
+.info-value {
+    color: #333;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-align: right;
+}
+
+
+/* Clubs */
+
+.club-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mini-club {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    background: #f7f8fc;
+}
+
+.mini-club-icon {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 10px;
+
+    background: #eeeeff;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 22px;
+}
+
+.mini-club h3 {
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.mini-club p {
+    color: #888;
+    font-size: 12px;
+}
+
+
+/* Registered Events */
+
+.registered-events {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.registered-event {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 18px;
+
+    border: 1px solid #eee;
+
+    border-radius: 12px;
+}
+
+.event-date-box {
+    width: 65px;
+    min-width: 65px;
+
+    height: 65px;
+
+    background: #eeeeff;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.event-date-box strong {
+    font-size: 22px;
+
+    color: #5b5bf7;
+}
+
+.event-date-box span {
+    font-size: 11px;
+
+    font-weight: 700;
+
+    color: #777;
+}
+
+.registered-event-info {
+    flex: 1;
+}
+
+.registered-event-info h3 {
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+.registered-event-info p {
+    color: #888;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+}
+
+.status {
+    display: inline-block;
+
+    padding: 4px 9px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.upcoming {
+    background: #e5f8e8;
+    color: #16853a;
+}
+
+.view-event-btn {
+    text-decoration: none;
+
+    color: #5b5bf7;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* Edit Form */
+
+.edit-card {
+    display: none;
+}
+
+.profile-form-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 13px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #5b5bf7;
+}
+
+.save-profile-btn {
+    margin-top: 20px;
+
+    padding: 13px 22px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #5b5bf7;
+
+    color: white;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.profile-message {
+    display: none;
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    background: #e5f8e8;
+
+    color: #16853a;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .profile-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .profile-header-content {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .profile-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .registered-event {
+        align-items: flex-start;
+    }
+
+}
